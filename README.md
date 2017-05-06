@@ -12,6 +12,9 @@ Third-party API used: *Wikipedia's API*
 
 Additional functionality included in this application: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations.
 
+Framework Used: [Knockout](http://knockoutjs.com/)
+- Knockout is used to handle the list, filter, and any other information on the page that is subject to changing state. Things that are not be handled by Knockout: anything the Maps API is used for, creating markers, tracking click events on markers, making the map, refreshing the map. Note 1: Tracking click events on list items is handled with Knockout. Note 2: Creating your markers as a part of your ViewModel.
+
 ## API's Used
 
 #### Google Map API
