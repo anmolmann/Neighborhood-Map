@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chandigarh</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form class="form-horizontal">
+		<div class="input-group">
+	    	<span class="input-group-addon search">Search</span>
+	    	<input id="msg" type="text" class="form-control input-lg search" name="msg" placeholder="&#128269; Enter any place to search..." data-bind="textInput: searchedLocation">
+	    </div>
+	</form>
+	
+	<div class="lower">
+		<div class="list">
+			<ul data-bind="foreach: List">
+				<li class="Search" data-bind="text: title, click: $parent.selectedLocation"></li>
+			</ul>
+			<div class="searchComplete">
+				<span class="text">Search for nearby places</span>
+				<input id="places-search" type="text" placeholder="Ex: Pizza delivery in Chandigarh">
+				<input id="go-places" class="btn-info" type="button" value="Go">
+			</div>
+		</div>
+		<div id="map"></div>
+	</div>
+
+	<script src="js/lib/jquery-3.1.1.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyC1qT4sTiwLEzr0TLmJ5cCbZgwuDloli7Y&v=3&callback=VM.initMap">
+    </script>
+
+    <script src="js/lib/knockout-3.2.0.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
